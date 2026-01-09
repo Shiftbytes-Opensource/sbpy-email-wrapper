@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbpyEmailWrapper"
+version = "0.0.1"
+description = "This project is aimed to simplify email integration in applications. This library / wrapper is written for python projects. This wrapper supports most popular email services such as AWS SES, Mailgun, etc. Refere wiki page for full list."
+authors = [
+    {name = "Sreenath", email = "sreenath@shiftbytes.co.in"}
+]
+license = "GPL-3.0-only"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3>= 1.42.24",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Shiftbytes-Opensource/sbpy-email-wrapper"
