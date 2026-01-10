@@ -1,10 +1,10 @@
-from services import aws_ses
+from sbpyEmailWrapper.mailServices.aws_ses import sendRegularEmail as AWSsendRegularEmail
 import os, re
-from errors import InvalidToEmailAddress, InvalidFromEmailAddress, InvlidEmailService, AttachmentsNotsupported, AsyncSendNotSupported, NoCallbackFunctionGiven
+from sbpyEmailWrapper.errors import InvalidToEmailAddress, InvalidFromEmailAddress, InvlidEmailService, AttachmentsNotsupported, AsyncSendNotSupported, NoCallbackFunctionGiven
 
 class EmailWrapper:
     
-    def __init__(self, email_service_name, async_send, callback_function):
+    def __init__(self, email_service_name, async_send = False, callback_function = None):
         if not email_service_name:
             raise InvlidEmailService
         
@@ -53,7 +53,7 @@ class EmailWrapper:
             raise AttachmentsNotsupported
         else:
             #No attachments
-            aws_ses.sendRegularEmail(toAddressList, subject, body, fromAddress)
+            AWSsendRegularEmail(toAddressList, subject, body, fromAddress)
     
     def isValidPath(filename):
         if os.path.isfile(filename):
