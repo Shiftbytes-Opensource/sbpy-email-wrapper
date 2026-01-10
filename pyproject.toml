@@ -10,11 +10,24 @@ authors = [
     {name = "Sreenath", email = "sreenath@shiftbytes.co.in"}
 ]
 license = "GPL-3.0-only"
+license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "boto3>= 1.42.24",
 ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Communications :: Email",
+]
 
 [project.urls]
 "Homepage" = "https://github.com/Shiftbytes-Opensource/sbpy-email-wrapper"
+
+[tool.setuptools]
+packages = { find = {} }
