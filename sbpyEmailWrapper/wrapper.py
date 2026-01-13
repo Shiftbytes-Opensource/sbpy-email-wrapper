@@ -28,7 +28,7 @@ class EmailWrapper:
         else:
             return False
 
-    def sendMail(self, toAddress, fromAddress, subject, body, attachements):
+    def sendMail(self, toAddress, fromAddress, subject, body, attachements = None):
         toAddressList = []
 
         if not toAddress:
