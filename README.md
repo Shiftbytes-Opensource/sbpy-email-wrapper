@@ -1,12 +1,6 @@
 # sbpy-email-wrapper
 This project is aimed to simplify email integration in applications. This library / wrapper is written for python projects. This wrapper supports most popular email services such as AWS SES, Mailgun, etc. Refere wiki page for full list.
 
-### Install from PyPI
-
-```bash
-pip install sbpyEmailWrapper
-```
-
 ### Install from Source (GitHub)
 
 ```bash
@@ -14,10 +8,6 @@ git clone https://github.com/Shiftbytes-Opensource/sbpy-email-wrapper.git
 cd sbpy-email-wrapper
 pip install .
 ```
-
-## Usage
-
-After installation, you can use `EmailWrapper` to train a model and make predictions.
 
 ### Example: Instantiation
 
